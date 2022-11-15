@@ -39,5 +39,8 @@ for (i = 0; i < team.length; i++) {
     const infoTeam = document.createElement("div");
     infoTeam.classList.add("m-3");
     listaTeamEl.append(infoTeam);
-    infoTeam.innerHTML += `<strong>Name:</strong> ${info.name}; <strong>Role:</strong> ${info.rule}; <strong>Photo:</strong> ${info.photo}`;
+    infoTeam.innerHTML += `<strong>Name:</strong> ${info.name}; <strong>Role:</strong> ${info.role};`;
+    const imgEl = document.createElement("img");
+    imgEl.src = "img/" + info.photo;
+    infoTeam.append(imgEl);
 }
