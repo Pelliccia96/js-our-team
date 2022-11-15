@@ -1,3 +1,5 @@
+const listaTeamEl = document.getElementById("listaTeam");
+
 const team = [
     {
         name:"Wayne Barnett",
@@ -30,4 +32,12 @@ console.log(team);
 
 for (let key in team) {
     console.log(team[key]);
+}
+
+for (i = 0; i < team.length; i++) {
+    const info = team[i];
+    const infoTeam = document.createElement("div");
+    infoTeam.classList.add("m-3");
+    listaTeamEl.append(infoTeam);
+    infoTeam.innerHTML += `<strong>Name:</strong> ${info.name}; <strong>Rule:</strong> ${info.rule}; <strong>Photo:</strong> ${info.photo}`;
 }
